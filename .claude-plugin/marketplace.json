@@ -5,22 +5,62 @@
     "email": "ironyjk@gmail.com"
   },
   "metadata": {
-    "description": "의사결정·커뮤니케이션·학문 프레임워크 6종 묶음. 경영전략(47) + 심리상담(14) + 양육교육(16) + 소통협상(20+) + 제약이론(TOC) + 혁신이론(TRIZ). 한국 맥락 내장, 한영 문서 제공.",
-    "version": "0.1.0"
+    "description": "의사결정·건강·투자·부동산·학습·개발·심리·양육·소통 프레임워크 9종 묶음. 학술 이론(Porter/Drucker/Markowitz/Ebbinghaus/Bjork 등) + 한국 맥락(세제·제도·문화) 내장. 메타 라우터 방식으로 상황에 맞는 프레임워크 자동 선택.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "strategy-frameworks",
       "source": { "source": "github", "repo": "ironyjk/strategy-frameworks" },
-      "description": "Strategic Thinking Agent — meta-router for 47 business strategy frameworks (Porter Five Forces, Drucker MBO, BSC, Blue Ocean, Wardley Mapping, BCG Matrix, BMC, Lean Startup, OKR, Disruptive Innovation, Scenario Planning, etc.). Invoke /think to auto-select optimal frameworks for any business problem.",
+      "description": "Strategic Thinking Agent — meta-router for 47 business strategy frameworks (Porter, Drucker, Wardley, Blue Ocean, BMC, Lean Startup, OKR, Disruptive Innovation, Scenario Planning, Real Options, Game Theory, etc.). Invoke /think.",
       "category": "business",
       "tags": ["strategy", "business", "decision-making", "porter", "drucker", "wardley", "korean"],
       "license": "MIT"
     },
     {
+      "name": "investment-framework",
+      "source": { "source": "github", "repo": "ironyjk/investment-framework" },
+      "description": "Personal investment meta-router — 12 frameworks (MPT, All Weather, Bogleheads, Barbell, Value, Factor, DCA, Rebalancing, Kelly Criterion, Korean Tax, Korean FIRE). Korean tax regime built-in. NOT investment advice. Invoke /money.",
+      "category": "investment",
+      "tags": ["investment", "portfolio", "korean-tax", "fire", "markowitz", "korean"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "real-estate-framework",
+      "source": { "source": "github", "repo": "ironyjk/real-estate-framework" },
+      "description": "Korean real estate meta-router — 9 frameworks (Hedonic, DiPasquale-Wheaton, Alonso-Muth-Mills, Cap Rate, Harrison Cycle, HBU, Redevelopment, Subscription, Gap Investment). Jeonse and HUG insurance built-in. Invoke /realty.",
+      "category": "real-estate",
+      "tags": ["real-estate", "korean", "jeonse", "harrison-cycle", "redevelopment"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "software-framework",
+      "source": { "source": "github", "repo": "ironyjk/software-framework" },
+      "description": "Software engineering meta-router — 12 frameworks (Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience, Strangler Fig, Team Topologies). Invoke /code.",
+      "category": "software-engineering",
+      "tags": ["software-engineering", "ddd", "hexagonal", "microservices", "team-topologies"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "health-framework",
+      "source": { "source": "github", "repo": "ironyjk/health-framework" },
+      "description": "Health & training meta-router — 12 evidence-based frameworks (Mediterranean Diet, Low Carb, Intermittent Fasting, Macro Tracking, Progressive Overload, Strength, Hypertrophy, Polarized Endurance, Sleep, Recovery, Biomarkers, Body Comp). NOT medical advice. Invoke /fit.",
+      "category": "health",
+      "tags": ["health", "training", "nutrition", "sleep", "evidence-based"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "learning-framework",
+      "source": { "source": "github", "repo": "ironyjk/learning-framework" },
+      "description": "Adult learning meta-router — 12 cognitive science frameworks (Zettelkasten, PARA, Evergreen Notes, Spaced Repetition, Active Recall, Feynman, Interleaving, Deliberate Practice, Chunking, Deep Work, Pomodoro, Metalearning). Korean learner context. Invoke /learn.",
+      "category": "learning",
+      "tags": ["learning", "zettelkasten", "spaced-repetition", "feynman", "korean"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
       "name": "counsel-frameworks",
       "source": { "source": "github", "repo": "ironyjk/counsel-frameworks" },
-      "description": "Psychological Framework Learning Tool — meta-router for 14 counseling frameworks (CBT, ACT, SFBT, MI, IFS, Narrative Therapy, MBSR, MBCT, PPT, REBT, Gottman, DBT Skills, Worden's Grief, PCT). For self-reflection and learning only, NOT a replacement for professional therapy. Invoke /counsel.",
+      "description": "Psychological Framework Learning Tool — meta-router for 14 counseling frameworks (CBT, ACT, SFBT, MI, IFS, Narrative, MBSR, MBCT, PPT, REBT, Gottman, DBT Skills, Worden's Grief, PCT). NOT a replacement for professional therapy. Invoke /counsel.",
       "category": "psychology",
       "tags": ["psychology", "counseling", "cbt", "act", "mindfulness", "korean"],
       "license": "MIT"
@@ -28,7 +68,7 @@
     {
       "name": "parenting-frameworks",
       "source": { "source": "github", "repo": "ironyjk/parenting-frameworks" },
-      "description": "Parenting & Education Framework Guide — meta-router for 16 frameworks (Positive Discipline, PET, CPS, Emotion Coaching, Triple P, Attachment Parenting, SDT, Montessori, DAP, UDL, UbD, PBL, Retrieval Practice, Growth Mindset, Formative Assessment, Differentiated Instruction). Invoke /parenting.",
+      "description": "Parenting & Education Framework Guide — 16 frameworks (Positive Discipline, PET, CPS, Emotion Coaching, Triple P, Attachment Parenting, SDT, Retrieval Practice, Growth Mindset, UbD, PBL, Montessori, DAP, UDL, Formative Assessment, Differentiated Instruction). Invoke /parenting.",
       "category": "parenting-education",
       "tags": ["parenting", "education", "child-development", "montessori", "korean"],
       "license": "MIT"
@@ -36,25 +76,9 @@
     {
       "name": "howtotalk",
       "source": { "source": "github", "repo": "ironyjk/howtotalk" },
-      "description": "Meta Communication Agent — routes among 20+ communication frameworks (NVC, Getting to Yes, Never Split the Difference, Radical Candor, Crucial Conversations, Difficult Conversations, Active Listening, DESC, Influence, SCARF, Socratic Method, Storytelling, etc.). Invoke /howtotalk.",
+      "description": "Meta Communication Agent — routes among 14 communication frameworks (NVC, Getting to Yes, Never Split the Difference, Radical Candor, Crucial Conversations, Difficult Conversations, Active Listening, DESC, Influence, MI, SCARF, Socratic, Storytelling). Invoke /howtotalk.",
       "category": "communication",
       "tags": ["communication", "negotiation", "feedback", "storytelling", "korean"],
-      "license": "MIT"
-    },
-    {
-      "name": "triz-agents",
-      "source": { "source": "github", "repo": "ironyjk/triz-agents" },
-      "description": "TRIZ — Systematic Innovation and Inventive Problem Solving toolkit (40 Inventive Principles, Contradiction Matrix, Ideal Final Result, Substance-Field Analysis, ARIZ algorithm, Evolution Laws, Trimming, Resources). For engineering contradictions and breakthrough innovation.",
-      "category": "innovation",
-      "tags": ["triz", "innovation", "problem-solving", "engineering", "invention"],
-      "license": "MIT"
-    },
-    {
-      "name": "toc-agents",
-      "source": { "source": "github", "repo": "ironyjk/toc-agents" },
-      "description": "Theory of Constraints Thinking Processes — full analysis pipeline and individual tools (Current Reality Tree, Evaporating Cloud, Future Reality Tree, Prerequisite Tree, Transition Tree, Five Focusing Steps, Drum-Buffer-Rope, Throughput Accounting, CCPM, Layers of Resistance).",
-      "category": "operations-strategy",
-      "tags": ["toc", "constraints", "goldratt", "operations", "systems-thinking"],
       "license": "MIT"
     }
   ]
