@@ -39,6 +39,44 @@
 /plugin install howtotalk@claude-frameworks
 ```
 
+### 짧은 이름으로 쓰기 (Optional)
+
+플러그인으로 설치하면 `/strategy-frameworks:think`처럼 긴 이름이 됩니다. `/think`처럼 짧게 쓰고 싶다면 래퍼 파일을 만드세요.
+
+**한 번에 전부 설정 (터미널에서 실행):**
+
+```bash
+mkdir -p ~/.claude/commands
+
+for cmd in think money realty code fit learn counsel parenting howtotalk peel; do
+  case $cmd in
+    think)    plugin="strategy-frameworks" ;;
+    money)    plugin="investment-framework" ;;
+    realty)   plugin="real-estate-framework" ;;
+    code)     plugin="software-framework" ;;
+    fit)      plugin="health-framework" ;;
+    learn)    plugin="learning-framework" ;;
+    counsel)  plugin="counsel-frameworks" ;;
+    parenting) plugin="parenting-frameworks" ;;
+    howtotalk) plugin="howtotalk" ;;
+    peel)     plugin="police-frameworks" ;;
+  esac
+  cat > ~/.claude/commands/${cmd}.md << EOF
+---
+description: "Shortcut for /${plugin}:${cmd}"
+---
+Invoke the skill \`${plugin}:${cmd}\` with these arguments: \$ARGUMENTS
+EOF
+done
+
+echo "Done! /think, /money, /code, /fit 등 짧은 이름 사용 가능"
+```
+
+설정 후 사용:
+- `/think "우리 회사 성장 전략"` → strategy-frameworks의 47개 프레임 중 자동 선택
+- `/money "ISA 절세 전략"` → investment-framework의 12개 프레임 중 자동 선택
+- `/fit "디스크 있는데 운동법"` → health-framework의 13개 프레임 중 자동 선택
+
 ### 포함 플러그인 (9개, 160+ 하위 프레임)
 
 #### 전략·비즈니스
@@ -140,6 +178,44 @@ A curated Claude Code plugin marketplace of **160+ evidence-based frameworks** a
 /plugin install strategy-frameworks@claude-frameworks
 # ... (see Korean section for full list)
 ```
+
+### Short Command Setup (Optional)
+
+After plugin install, commands look like `/strategy-frameworks:think`. To use short names like `/think`, create wrapper files.
+
+**Set up all at once (run in terminal):**
+
+```bash
+mkdir -p ~/.claude/commands
+
+for cmd in think money realty code fit learn counsel parenting howtotalk peel; do
+  case $cmd in
+    think)    plugin="strategy-frameworks" ;;
+    money)    plugin="investment-framework" ;;
+    realty)   plugin="real-estate-framework" ;;
+    code)     plugin="software-framework" ;;
+    fit)      plugin="health-framework" ;;
+    learn)    plugin="learning-framework" ;;
+    counsel)  plugin="counsel-frameworks" ;;
+    parenting) plugin="parenting-frameworks" ;;
+    howtotalk) plugin="howtotalk" ;;
+    peel)     plugin="police-frameworks" ;;
+  esac
+  cat > ~/.claude/commands/${cmd}.md << EOF
+---
+description: "Shortcut for /${plugin}:${cmd}"
+---
+Invoke the skill \`${plugin}:${cmd}\` with these arguments: \$ARGUMENTS
+EOF
+done
+
+echo "Done! /think, /money, /code, /fit and more are ready"
+```
+
+After setup:
+- `/think "our company growth strategy"` → auto-selects from 47 strategy frameworks
+- `/money "ISA tax optimization"` → auto-selects from 12 investment frameworks
+- `/fit "exercise with a herniated disc"` → auto-selects from 13 health frameworks
 
 ### Plugins (9, 160+ sub-frameworks)
 
