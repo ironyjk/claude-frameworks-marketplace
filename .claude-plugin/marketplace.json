@@ -1,0 +1,61 @@
+{
+  "name": "claude-frameworks",
+  "owner": {
+    "name": "Choi Hee Chul (ironyjk)",
+    "email": "ironyjk@gmail.com"
+  },
+  "metadata": {
+    "description": "의사결정·커뮤니케이션·학문 프레임워크 6종 묶음. 경영전략(47) + 심리상담(14) + 양육교육(16) + 소통협상(20+) + 제약이론(TOC) + 혁신이론(TRIZ). 한국 맥락 내장, 한영 문서 제공.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "strategy-frameworks",
+      "source": { "source": "github", "repo": "ironyjk/strategy-frameworks" },
+      "description": "Strategic Thinking Agent — meta-router for 47 business strategy frameworks (Porter Five Forces, Drucker MBO, BSC, Blue Ocean, Wardley Mapping, BCG Matrix, BMC, Lean Startup, OKR, Disruptive Innovation, Scenario Planning, etc.). Invoke /think to auto-select optimal frameworks for any business problem.",
+      "category": "business",
+      "tags": ["strategy", "business", "decision-making", "porter", "drucker", "wardley", "korean"],
+      "license": "MIT"
+    },
+    {
+      "name": "counsel-frameworks",
+      "source": { "source": "github", "repo": "ironyjk/counsel-frameworks" },
+      "description": "Psychological Framework Learning Tool — meta-router for 14 counseling frameworks (CBT, ACT, SFBT, MI, IFS, Narrative Therapy, MBSR, MBCT, PPT, REBT, Gottman, DBT Skills, Worden's Grief, PCT). For self-reflection and learning only, NOT a replacement for professional therapy. Invoke /counsel.",
+      "category": "psychology",
+      "tags": ["psychology", "counseling", "cbt", "act", "mindfulness", "korean"],
+      "license": "MIT"
+    },
+    {
+      "name": "parenting-frameworks",
+      "source": { "source": "github", "repo": "ironyjk/parenting-frameworks" },
+      "description": "Parenting & Education Framework Guide — meta-router for 16 frameworks (Positive Discipline, PET, CPS, Emotion Coaching, Triple P, Attachment Parenting, SDT, Montessori, DAP, UDL, UbD, PBL, Retrieval Practice, Growth Mindset, Formative Assessment, Differentiated Instruction). Invoke /parenting.",
+      "category": "parenting-education",
+      "tags": ["parenting", "education", "child-development", "montessori", "korean"],
+      "license": "MIT"
+    },
+    {
+      "name": "howtotalk",
+      "source": { "source": "github", "repo": "ironyjk/howtotalk" },
+      "description": "Meta Communication Agent — routes among 20+ communication frameworks (NVC, Getting to Yes, Never Split the Difference, Radical Candor, Crucial Conversations, Difficult Conversations, Active Listening, DESC, Influence, SCARF, Socratic Method, Storytelling, etc.). Invoke /howtotalk.",
+      "category": "communication",
+      "tags": ["communication", "negotiation", "feedback", "storytelling", "korean"],
+      "license": "MIT"
+    },
+    {
+      "name": "triz-agents",
+      "source": { "source": "github", "repo": "ironyjk/triz-agents" },
+      "description": "TRIZ — Systematic Innovation and Inventive Problem Solving toolkit (40 Inventive Principles, Contradiction Matrix, Ideal Final Result, Substance-Field Analysis, ARIZ algorithm, Evolution Laws, Trimming, Resources). For engineering contradictions and breakthrough innovation.",
+      "category": "innovation",
+      "tags": ["triz", "innovation", "problem-solving", "engineering", "invention"],
+      "license": "MIT"
+    },
+    {
+      "name": "toc-agents",
+      "source": { "source": "github", "repo": "ironyjk/toc-agents" },
+      "description": "Theory of Constraints Thinking Processes — full analysis pipeline and individual tools (Current Reality Tree, Evaporating Cloud, Future Reality Tree, Prerequisite Tree, Transition Tree, Five Focusing Steps, Drum-Buffer-Rope, Throughput Accounting, CCPM, Layers of Resistance).",
+      "category": "operations-strategy",
+      "tags": ["toc", "constraints", "goldratt", "operations", "systems-thinking"],
+      "license": "MIT"
+    }
+  ]
+}
