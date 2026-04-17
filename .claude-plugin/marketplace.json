@@ -5,7 +5,7 @@
     "email": "ironyjk@gmail.com"
   },
   "metadata": {
-    "description": "의사결정·건강·투자·부동산·학습·개발·심리·양육·소통 프레임워크 9종 묶음. 학술 이론(Porter/Drucker/Markowitz/Ebbinghaus/Bjork 등) + 한국 맥락(세제·제도·문화) 내장. 메타 라우터 방식으로 상황에 맞는 프레임워크 자동 선택.",
+    "description": "의사결정·건강·투자·부동산·학습·개발·심리·양육·소통·사이클링·골프 프레임워크 11종 묶음. 학술 이론(Porter/Drucker/Markowitz/Ebbinghaus/Bjork/Coggan/Broadie 등) + 한국 맥락(세제·제도·문화) 내장. 메타 라우터 방식으로 상황에 맞는 프레임워크 자동 선택.",
     "version": "0.2.0"
   },
   "plugins": [
@@ -36,7 +36,7 @@
     {
       "name": "software-framework",
       "source": { "source": "github", "repo": "ironyjk/software-framework" },
-      "description": "Software engineering meta-router — 12 frameworks (Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience, Strangler Fig, Team Topologies). Invoke /code.",
+      "description": "Software engineering meta-router — 15 frameworks (Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience, Strangler Fig, Team Topologies, OWASP Security, CI/CD Basics, API Design). Invoke /code.",
       "category": "software-engineering",
       "tags": ["software-engineering", "ddd", "hexagonal", "microservices", "team-topologies"],
       "license": "CC-BY-NC-4.0"
