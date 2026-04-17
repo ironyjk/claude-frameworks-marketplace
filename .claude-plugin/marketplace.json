@@ -80,6 +80,22 @@
       "category": "communication",
       "tags": ["communication", "negotiation", "feedback", "storytelling", "korean"],
       "license": "MIT"
+    },
+    {
+      "name": "cycling-framework",
+      "source": { "source": "github", "repo": "ironyjk/cycling-framework" },
+      "description": "Cycling coaching — 8 frameworks (Power Zones, Periodization, Polarized Training, Nutrition, Bike Fit, Indoor, Events, Injury Prevention). Invoke /ride.",
+      "category": "sports",
+      "tags": ["cycling", "power-meter", "training", "korean"],
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "name": "golf-framework",
+      "source": { "source": "github", "repo": "ironyjk/golf-framework" },
+      "description": "Golf coaching — 8 frameworks (Strokes Gained, Course Management, Mental Game, Short Game, Practice, Club Fitting, Conditioning, Scoring). No swing mechanics. Invoke /golf.",
+      "category": "sports",
+      "tags": ["golf", "strokes-gained", "mental-game", "korean"],
+      "license": "CC-BY-NC-4.0"
     }
   ]
 }
