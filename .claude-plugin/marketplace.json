@@ -44,7 +44,7 @@
     {
       "name": "health-framework",
       "source": { "source": "github", "repo": "ironyjk/health-framework" },
-      "description": "Health & training meta-router — 12 evidence-based frameworks (Mediterranean Diet, Low Carb, Intermittent Fasting, Macro Tracking, Progressive Overload, Strength, Hypertrophy, Polarized Endurance, Sleep, Recovery, Biomarkers, Body Comp). NOT medical advice. Invoke /fit.",
+      "description": "Health & training meta-router — 13 evidence-based frameworks (Mediterranean Diet, Low Carb, Intermittent Fasting, Macro Tracking, Progressive Overload, Strength, Hypertrophy, Polarized Endurance, Sleep, Recovery, Biomarkers, Body Comp, Occupational Health). NOT medical advice. Invoke /fit.",
       "category": "health",
       "tags": ["health", "training", "nutrition", "sleep", "evidence-based"],
       "license": "CC-BY-NC-4.0"
