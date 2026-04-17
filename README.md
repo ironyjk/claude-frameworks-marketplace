@@ -1,6 +1,6 @@
 # Claude Frameworks Marketplace
 
-> Claude Code plugin marketplace for decision-making, investment, real estate, health, learning, software, psychology, parenting, and communication frameworks.
+> Claude Code plugin marketplace for decision-making, investment, real estate, health, learning, software, psychology, parenting, communication, cycling, and golf frameworks.
 
 [한국어](README.ko.md) | **English**
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-A curated Claude Code plugin marketplace of **160+ evidence-based frameworks** across 9 domains. Each plugin is independently installable with a meta-router pattern that auto-selects the optimal frameworks for your situation.
+A curated Claude Code plugin marketplace of **180+ evidence-based frameworks** across 11 domains. Each plugin is independently installable with a meta-router pattern that auto-selects the optimal frameworks for your situation.
 
 ### Features
 
@@ -34,6 +34,8 @@ A curated Claude Code plugin marketplace of **160+ evidence-based frameworks** a
 /plugin install counsel-frameworks@claude-frameworks
 /plugin install parenting-frameworks@claude-frameworks
 /plugin install howtotalk@claude-frameworks
+/plugin install cycling-framework@claude-frameworks
+/plugin install golf-framework@claude-frameworks
 ```
 
 ## Short Command Setup (Optional)
@@ -45,7 +47,7 @@ After plugin install, commands look like `/strategy-frameworks:think`. To use sh
 ```bash
 mkdir -p ~/.claude/commands
 
-for cmd in think money realty code fit learn counsel parenting howtotalk peel; do
+for cmd in think money realty code fit learn counsel parenting howtotalk peel ride golf; do
   case $cmd in
     think)    plugin="strategy-frameworks" ;;
     money)    plugin="investment-framework" ;;
@@ -57,6 +59,8 @@ for cmd in think money realty code fit learn counsel parenting howtotalk peel; d
     parenting) plugin="parenting-frameworks" ;;
     howtotalk) plugin="howtotalk" ;;
     peel)     plugin="police-frameworks" ;;
+    ride)     plugin="cycling-framework" ;;
+    golf)     plugin="golf-framework" ;;
   esac
   cat > ~/.claude/commands/${cmd}.md << EOF
 ---
@@ -74,7 +78,7 @@ After setup:
 - `/money "ISA (개인종합자산관리계좌) tax optimization"` → auto-selects from 12 investment frameworks
 - `/fit "exercise with a herniated disc"` → auto-selects from 13 health frameworks
 
-## Plugins (9, 160+ sub-frameworks)
+## Plugins (11, 180+ sub-frameworks)
 
 ### Business & Strategy
 
@@ -103,13 +107,13 @@ Real estate: Hedonic, DiPasquale-Wheaton, Alonso-Muth-Mills, Cap Rate/DCF, Harri
 |---|---|---|---|
 | **health-framework** | `/fit` | 12 | CC-BY-NC-4.0 |
 | **learning-framework** | `/learn` | 12 | CC-BY-NC-4.0 |
-| **software-framework** | `/code` | 12 | CC-BY-NC-4.0 |
+| **software-framework** | `/code` | 15 | CC-BY-NC-4.0 |
 
 Health: Mediterranean, Low Carb/Keto, Intermittent Fasting, Macro Tracking, Progressive Overload, Strength, Hypertrophy, Polarized Endurance, Sleep, Recovery/Periodization (burnout vs. overtraining distinction), Blood Biomarkers, Body Composition.
 
 Learning: Zettelkasten, PARA, Evergreen Notes, Spaced Repetition, Active Recall, Feynman (with AI feedback workflow), Interleaving, Deliberate Practice, Chunking, Deep Work, Pomodoro, Metalearning.
 
-Software: Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience Patterns, Strangler Fig, Team Topologies.
+Software: Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience Patterns, Strangler Fig, Team Topologies, OWASP Security, CI/CD Basics, API Design.
 
 ### Psychology · Parenting · Communication
 
@@ -125,6 +129,17 @@ Psychology: CBT, ACT, SFBT, MI, IFS, Narrative Therapy, MBSR, MBCT, PPT, REBT, G
 Parenting: Positive Discipline, PET, CPS, Emotion Coaching, Triple P, Attachment Parenting, SDT, Retrieval Practice, Growth Mindset, UbD, PBL, Montessori, DAP, UDL, Formative Assessment, Differentiated Instruction.
 
 Communication: NVC, Getting to Yes, Never Split the Difference, Radical Candor, Crucial Conversations, Difficult Conversations, Active Listening, DESC, Influence, Motivational Interviewing, SCARF, Socratic, Storytelling.
+
+### Sports
+
+| Plugin | Slash | Frameworks | License |
+|---|---|---|---|
+| **cycling-framework** | `/ride` | 8 | CC-BY-NC-4.0 |
+| **golf-framework** | `/golf` | 8 | CC-BY-NC-4.0 |
+
+Cycling: Power Zones (Coggan), Periodization (Friel), Polarized Training (Seiler 80/20), Nutrition & Fueling, Bike Fit & Equipment, Indoor Training (Zwift), Endurance Events, Injury Prevention.
+
+Golf: Strokes Gained (Broadie), Course Management (DECADE), Mental Game (Rotella), Short Game (Pelz), Practice Design, Club Fitting, Physical Conditioning (TPI), Scoring Strategy. No swing mechanics — text-based swing coaching is harmful.
 
 ## Design Principles
 
@@ -151,6 +166,8 @@ All plugins share the following principles:
   - [counsel-frameworks](https://github.com/ironyjk/counsel-frameworks)
   - [parenting-frameworks](https://github.com/ironyjk/parenting-frameworks)
   - [howtotalk](https://github.com/ironyjk/howtotalk)
+  - [cycling-framework](https://github.com/ironyjk/cycling-framework)
+  - [golf-framework](https://github.com/ironyjk/golf-framework)
 
 ## Licensing
 

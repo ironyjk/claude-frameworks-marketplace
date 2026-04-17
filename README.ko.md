@@ -1,6 +1,6 @@
 # Claude Frameworks Marketplace
 
-> 의사결정·투자·부동산·건강·학습·개발·심리·양육·소통 9개 프레임워크 묶음.
+> 의사결정·투자·부동산·건강·학습·개발·심리·양육·소통·사이클링·골프 11개 프레임워크 묶음.
 
 **한국어** | [English](README.md)
 
@@ -8,7 +8,7 @@
 
 ## 개요
 
-이 마켓플레이스는 **160+ 검증된 프레임워크**를 Claude Code 플러그인으로 제공합니다. 각 플러그인은 독립적으로 설치 가능하며, 메타 라우터 방식으로 상황에 맞는 프레임워크를 자동 선택합니다.
+이 마켓플레이스는 **180+ 검증된 프레임워크**를 Claude Code 플러그인으로 제공합니다. 각 플러그인은 독립적으로 설치 가능하며, 메타 라우터 방식으로 상황에 맞는 프레임워크를 자동 선택합니다.
 
 ### 특징
 
@@ -34,6 +34,8 @@
 /plugin install counsel-frameworks@claude-frameworks
 /plugin install parenting-frameworks@claude-frameworks
 /plugin install howtotalk@claude-frameworks
+/plugin install cycling-framework@claude-frameworks
+/plugin install golf-framework@claude-frameworks
 ```
 
 ## 짧은 이름으로 쓰기 (Optional)
@@ -45,7 +47,7 @@
 ```bash
 mkdir -p ~/.claude/commands
 
-for cmd in think money realty code fit learn counsel parenting howtotalk peel; do
+for cmd in think money realty code fit learn counsel parenting howtotalk peel ride golf; do
   case $cmd in
     think)    plugin="strategy-frameworks" ;;
     money)    plugin="investment-framework" ;;
@@ -57,6 +59,8 @@ for cmd in think money realty code fit learn counsel parenting howtotalk peel; d
     parenting) plugin="parenting-frameworks" ;;
     howtotalk) plugin="howtotalk" ;;
     peel)     plugin="police-frameworks" ;;
+    ride)     plugin="cycling-framework" ;;
+    golf)     plugin="golf-framework" ;;
   esac
   cat > ~/.claude/commands/${cmd}.md << EOF
 ---
@@ -74,7 +78,7 @@ echo "Done! /think, /money, /code, /fit 등 짧은 이름 사용 가능"
 - `/money "ISA 절세 전략"` → investment-framework의 12개 프레임 중 자동 선택
 - `/fit "디스크 있는데 운동법"` → health-framework의 13개 프레임 중 자동 선택
 
-## 포함 플러그인 (9개, 160+ 하위 프레임)
+## 포함 플러그인 (11개, 180+ 하위 프레임)
 
 ### 전략·비즈니스
 
@@ -103,13 +107,13 @@ Porter Five Forces, Drucker MBO/5Q, BSC, Blue Ocean, Wardley Mapping, BCG Matrix
 |---|---|---|---|
 | **health-framework** | `/fit` | 12 | CC-BY-NC-4.0 |
 | **learning-framework** | `/learn` | 12 | CC-BY-NC-4.0 |
-| **software-framework** | `/code` | 12 | CC-BY-NC-4.0 |
+| **software-framework** | `/code` | 15 | CC-BY-NC-4.0 |
 
 건강: Mediterranean, Low Carb/Keto, Intermittent Fasting, Macro Tracking, Progressive Overload, Strength, Hypertrophy, Polarized Endurance, Sleep, Recovery/Periodization (번아웃·과훈련 구분 포함), Blood Biomarkers, Body Composition.
 
 학습: Zettelkasten, PARA, Evergreen Notes, Spaced Repetition, Active Recall, Feynman (AI 피드백 워크플로 포함), Interleaving, Deliberate Practice, Chunking, Deep Work, Pomodoro, Metalearning.
 
-개발: Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience Patterns, Strangler Fig, Team Topologies.
+개발: Scientific Debugging, Bisection, Observability, Hexagonal, DDD, Event Sourcing/CQRS, Modular Monolith, SOLID, 12-Factor, Resilience Patterns, Strangler Fig, Team Topologies, OWASP Security, CI/CD Basics, API Design.
 
 ### 심리·양육·소통
 
@@ -125,6 +129,17 @@ Porter Five Forces, Drucker MBO/5Q, BSC, Blue Ocean, Wardley Mapping, BCG Matrix
 양육: Positive Discipline, PET, CPS, Emotion Coaching, Triple P, Attachment Parenting, SDT, Retrieval Practice, Growth Mindset, UbD, PBL, Montessori, DAP, UDL, Formative Assessment, Differentiated Instruction.
 
 소통: NVC, Getting to Yes, Never Split the Difference, Radical Candor, Crucial Conversations, Difficult Conversations, Active Listening, DESC, Influence, Motivational Interviewing, SCARF, Socratic, Storytelling.
+
+### 스포츠
+
+| 플러그인 | 슬래시 | 프레임 수 | 라이선스 |
+|---|---|---|---|
+| **cycling-framework** | `/ride` | 8 | CC-BY-NC-4.0 |
+| **golf-framework** | `/golf` | 8 | CC-BY-NC-4.0 |
+
+사이클링: Power Zones (Coggan), Periodization (Friel), Polarized Training (Seiler 80/20), 영양·보급, 바이크핏·장비, 실내 훈련 (Zwift), 장거리 이벤트, 부상 예방.
+
+골프: Strokes Gained (Broadie), Course Management (DECADE), Mental Game (Rotella), Short Game (Pelz), Practice Design, Club Fitting, Physical Conditioning (TPI), Scoring Strategy. 스윙 교정은 하지 않음 — 텍스트로 스윙 교정은 해로움.
 
 ## 설계 원칙
 
@@ -151,6 +166,8 @@ Porter Five Forces, Drucker MBO/5Q, BSC, Blue Ocean, Wardley Mapping, BCG Matrix
   - [counsel-frameworks](https://github.com/ironyjk/counsel-frameworks)
   - [parenting-frameworks](https://github.com/ironyjk/parenting-frameworks)
   - [howtotalk](https://github.com/ironyjk/howtotalk)
+  - [cycling-framework](https://github.com/ironyjk/cycling-framework)
+  - [golf-framework](https://github.com/ironyjk/golf-framework)
 
 ## 라이선스
 
